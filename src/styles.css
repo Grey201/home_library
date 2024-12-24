@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+    @apply border-white border-solid border-[1px] h-5
+
+}
+
+select {
+    @apply border-white border-solid border-[1px] h-5
+}
+
+input:hover, select:hover  {
+    @apply border-secondary border-[1px]
+}
+
+.active {
+    @apply bg-white;
+}

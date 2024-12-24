@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Started</title>
+  </head>
+  <body class="bg-white">
+    <header class="green">
+      <h1 class="font-serif bg-secondary h-72 text-primary text-lg p-5">
+        Домашняя библиотека
+      </h1>
+
+      <form
+        name="addBookForm"
+        class="bg-primary add-book-form w-2/3 absolute left-80 top-40 p-4 rounded-sm shadow-2xl text-sm flex justify-between items-center gap-x-1.5"
+      >
+        <input
+          class="w-1/2"
+          name="bookName"
+          type="text"
+          placeholder="Название книги"
+          required
+        />
+        <input name="author" type="text" placeholder="Автор" required />
+        <select name="genre" required></select>
+        <button
+          type="submit"
+          class="p-1 px-2 bg-secondary text-primary rounded-md text-xs hover:bg-primary hover:text-secondary hover:border-secondary hover:border-[1px]"
+        >
+          Добавить
+        </button>
+      </form>
+    </header>
+    <main
+      class="flex flex-col justify-around bg-primary text-sm w-4/6 absolute left-80 top-64 p-4 shadow-2xl rounded-sm"
+    >
+      <div class="flex flex-row text-textcolor mb-1">
+        <p class="basis-1/2">Название книги</p>
+        <p class="basis-1/4">Автор</p>
+        <p class="basis-1/4">Жанр</p>
+      </div>
+      <ul class="book-list"></ul>
+    </main>
+    <div
+      class="z-10 fixed left-0 top-16 bg-primary h-screen w-1/5 shadow-2xl p-2"
+    >
+      <img
+        src="./assets/BookOpen.svg"
+        alt="book"
+        class="w-16 h-16 my-6 mx-auto"
+      />
+      <ul class="genre-list"></ul>
+    </div>
+    <template id="genre-item-template">
+      <li class="genre-item text-textcolor text-sm my-2">
+        <button
+          class="todo-item-button hover:text-black w-full py-2 rounded text-left pl-3"
+        ></button>
+      </li>
+    </template>
+    <template id="book-item-template">
+      <li
+        class="book-item flex flex-row border-spacing-2 whitespace-normal border-white border-solid border-b-[1px] p-1"
+      >
+        <p class="book-name basis-1/2"></p>
+        <p class="author basis-1/4"></p>
+        <p class="genre basis-1/4"></p>
+      </li>
+    </template>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
